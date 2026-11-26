@@ -1,78 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DIU Library | Daffodil International University</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amader Library - Gyaner Alo</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>body{font-family:'Plus Jakarta Sans',sans-serif;background:#F6F8FB}.serif{font-family:'Playfair Display',serif}.db-btn.active{background:#0B2A5B;color:white}</style>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Hind Siliguri',sans-serif; background:#FFF7ED;}
+.font-head{font-family:'Poppins',sans-serif;}
+</style>
 </head>
 <body>
-<div class="bg-[#0B2A5B] text-white text-[12px] py-2 px-4 flex justify-between"><span>📍 Daffodil Smart City, Birulia, Savar</span><span class="hidden md:block">library@daffodilvarsity.edu.bd</span></div>
-<header class="bg-white shadow sticky top-0 z-50"><div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-<div class="flex gap-3 items-center"><div class="w-11 h-11 bg-[#0B2A5B] text-white rounded-xl flex items-center justify-center font-extrabold text-xl">D</div><div><h1 class="font-extrabold text-[18px] leading-none text-[#0B2A5B]">DIU LIBRARY</h1><p class="text-[10px] tracking-widest text-gray-500">DAFFODIL INTERNATIONAL UNIVERSITY</p></div></div>
-<div class="hidden md:flex gap-5 font-semibold text-[13px]"><a href="#">Home</a><a href="#database">A-Z Database</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
-<button class="bg-[#00A651] text-white px-4 py-2 rounded-full font-bold text-[12px]">My Account</button></div></header>
 
-<section class="max-w-7xl mx-auto px-4 mt-4"><div class="relative rounded-[24px] overflow-hidden h-[380px] md:h-[440px]">
-<img src="IMG_20261126_170118.jpg" class="absolute inset-0 w-full h-full object-cover">
-<div class="absolute inset-0 bg-black/55"></div>
-<div class="relative z-10 h-full flex flex-col justify-center px-6 md:px-10 text-white">
-<span class="bg-white/20 w-fit px-3 py-1 rounded-full text-[12px]">✦ Koha-ILS Smart Library</span>
-<h2 class="serif text-[34px] md:text-[52px] leading-[1.05] mt-3">Read, Learn &<br>Lead The Future.</h2>
-<p class="text-white/80 mt-3 max-w-md text-[14px]">DIU Central Library - 50,000+ Books, Journals & E-Resources ekhon tomar hate.</p>
-<div class="mt-5 flex gap-2 bg-white rounded-full p-1.5 max-w-md"><input id="searchInput" oninput="searchDB()" placeholder="Database khujo... ACM, JSTOR, IEEE..." class="flex-1 outline-none text-black px-4 text-[14px] bg-transparent"><button class="bg-[#00A651] px-5 py-2.5 rounded-full font-bold text-[14px]">Search</button></div>
-</div></div></section>
-
-<section class="max-w-7xl mx-auto px-4 mt-5 grid md:grid-cols-3 gap-4">
-<div class="md:col-span-2 bg-amber-50 border border-amber-200 rounded-2xl p-4"><p class="font-bold text-[13px] text-amber-700">📢 LIBRARY NOTICE</p><h3 class="font-bold mt-1">Registration of Koha-ILS and MARC21 Training</h3><p class="text-[12px] text-gray-500 mt-1">Posted on 05.11.2026 • Library, DIU</p></div>
-<div class="bg-white rounded-2xl p-4 shadow-sm"><p class="font-bold text-[13px]">🕒 LIBRARY HOURS</p><p class="text-[13px] mt-2">Sat - Thu: <b>08:00 AM - 08:00 PM</b></p><p class="text-[13px]">Friday: <b>08:00 AM - 04:00 PM</b></p><p class="text-[12px] text-green-600 font-bold mt-1">● Open Now</p></div>
-</section>
-
-<section id="database" class="max-w-7xl mx-auto px-4 mt-6 bg-white rounded-[24px] p-5 md:p-6 shadow-sm">
-<div class="flex justify-between items-center"><h3 class="font-extrabold text-[20px]">A to Z Database</h3><div class="flex gap-2"><button onclick="prevPage()" class="w-9 h-9 bg-gray-100 rounded-full font-bold">&lt;</button><button onclick="nextPage()" class="w-9 h-9 bg-gray-100 rounded-full font-bold">&gt;</button></div></div>
-<div class="flex gap-2 mt-4 flex-wrap">
-<button onclick="setCat('A',this)" class="db-btn active bg-gray-100 px-4 py-2 rounded-full text-[13px] font-bold">A</button>
-<button onclick="setCat('B-G',this)" class="db-btn bg-gray-100 px-4 py-2 rounded-full text-[13px] font-bold">B - G</button>
-<button onclick="setCat('H-N',this)" class="db-btn bg-gray-100 px-4 py-2 rounded-full text-[13px] font-bold">H - N</button>
-<button onclick="setCat('O-R',this)" class="db-btn bg-gray-100 px-4 py-2 rounded-full text-[13px] font-bold">O - R</button>
-<button onclick="setCat('S-Z',this)" class="db-btn bg-gray-100 px-4 py-2 rounded-full text-[13px] font-bold">S - Z</button>
+<!-- NAVBAR -->
+<nav class="bg-[#5C3317] text-white p-4 sticky top-0 z-50 flex justify-between items-center shadow-lg">
+<div class="flex items-center gap-2">
+<span class="text-3xl">📚</span>
+<h1 class="font-head font-bold text-lg md:text-2xl">AMADER LIBRARY</h1>
 </div>
-<div id="dbGrid" class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-5"></div>
-<p id="dbCount" class="text-[12px] text-gray-400 mt-4 text-center"></p>
+<div class="hidden md:flex gap-6 font-semibold">
+<a href="#home">Home</a>
+<a href="#importance">Importance</a>
+<a href="#books">Books</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+<a href="#contact" class="bg-amber-400 text-black px-4 py-2 rounded-full font-bold text-sm">Join Now</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="relative">
+<img src="IMG_20261126_170118.jpg" class="w-full h-[480px] md:h-[580px] object-cover">
+<div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white px-4">
+<h2 class="font-head text-3xl md:text-6xl font-extrabold leading-tight">GYANER ALO<br><span class="text-amber-400">AMADER LIBRARY</span></h2>
+<p class="mt-4 max-w-2xl text-base md:text-lg">Boi poro, jibon goro. Amader library sudhu boier ghor na, eita sopno dekhar jayga.</p>
+<div class="flex gap-3 mt-6">
+<a href="#books" class="bg-amber-400 text-black px-6 py-3 rounded-full font-bold">📖 Boi Dekho</a>
+<a href="#importance" class="bg-white text-black px-6 py-3 rounded-full font-bold">Keno Dorkar?</a>
+</div>
+<div class="flex gap-6 mt-8 text-center">
+<div><p class="text-2xl font-bold">5000+</p><p class="text-xs">Boi</p></div>
+<div><p class="text-2xl font-bold">1200+</p><p class="text-xs">Member</p></div>
+<div><p class="text-2xl font-bold">100%</p><p class="text-xs">Free</p></div>
+</div>
+</div>
 </section>
 
-<section id="gallery" class="max-w-7xl mx-auto px-4 mt-6"><h3 class="font-extrabold text-[20px] mb-3">Inside Our Library 📚</h3>
-<div class="grid grid-cols-3 gap-3"><img src="IMG_20261126_170104.jpg" class="rounded-2xl h-[150px] md:h-[260px] w-full object-cover"><img src="IMG_20261126_170051.jpg" class="rounded-2xl h-[150px] md:h-[260px] w-full object-cover"><img src="IMG_20261126_170118.jpg" class="rounded-2xl h-[150px] md:h-[260px] w-full object-cover"></div>
-<p class="text-center text-[13px] text-gray-500 mt-2 italic">"oh, to be lost in a book right now."</p></section>
-
-<section class="max-w-7xl mx-auto px-4 mt-6 grid md:grid-cols-3 gap-4 pb-10">
-<div class="bg-white rounded-2xl p-5"><h4 class="font-extrabold">📂 Resources</h4><ul class="text-[13px] mt-3 space-y-2 text-gray-700"><li>• E-Library</li><li>• Database A-Z</li><li>• Institutional Repository</li><li>• Voice Library</li><li>• E-Newspaper</li><li>• Remote Access</li></ul></div>
-<div class="bg-white rounded-2xl p-5"><h4 class="font-extrabold">✨ Services</h4><ul class="text-[13px] mt-3 space-y-2 text-gray-700"><li>• Item Renew</li><li>• Literacy Classes</li><li>• Internship Portal</li><li>• Reference Management</li><li>• Turnitin Manual</li><li>• DIU Business in a Box</li></ul></div>
-<div id="contact" class="bg-[#0B2A5B] text-white rounded-2xl p-5"><h4 class="font-extrabold">📞 Quick Contacts</h4><p class="text-[13px] mt-3">Tel: +880222244418 (33-34)</p><p class="text-[13px] mt-1">Circulation Desk: 65267</p><p class="text-[13px] mt-1">Head: librarian@daffodilvarsity.edu.bd</p><p class="text-[13px] mt-1">Turnitin: library2@daffodilvarsity.edu.bd</p><p class="text-[13px] mt-1">Membership: library12@daffodilvarsity.edu.bd</p></div>
+<!-- ABOUT -->
+<section class="max-w-6xl mx-auto px-4 py-12">
+<div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 grid md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="font-head text-2xl md:text-3xl font-bold text-[#5C3317]">Amader Library Somporke</h3>
+<p class="mt-4 text-gray-700 leading-relaxed">Amader library 2015 sal theke elakar chatro, shikkhok ebong boi premider seba diye asche. Ekhane niribili porar poribesh, computer, free WiFi ebong 5000+ boi ache.</p>
+<ul class="mt-4 space-y-2 font-semibold text-gray-800">
+<li>✅ Sokale 9ta - Rate 8ta porjonto khola</li>
+<li>✅ Sobar jonno sompurno FREE</li>
+<li>✅ BCS, Admission, Job er alada section</li>
+<li>✅ Bacchader jonno alada Golper Boi Corner</li>
+</ul>
+</div>
+<img src="IMG_20261126_172336.jpg" class="rounded-2xl w-full h-[300px] object-cover shadow">
+</div>
 </section>
-<footer class="bg-[#0B2A5B] text-white text-center py-5 text-[13px]">© 2026 DIU Library • Made with ❤️ by Nusaiba Nuzhat</footer>
-<script>
-let allDB = {
-'A':["ACM Digital Library","ARDI - Research4Life","ASA - Acoustical Society","ASCE Library","AGORA - Research4Life","Academic Search","American Chemical Society"],
-'B-G':["BDLex - BDLex","DOAJ - Directory of Open Access","Emerald Insight","EBSCOhost","ERIC - Education Resources","Elsevier - ScienceDirect","Gale - Academic OneFile"],
-'H-N':["HINARI - Research4Life","IEEE Xplore","IOPscience","JSTOR","J-Gate","LexisNexis","Nature","New England Journal"],
-'O-R':["OARE - Research4Life","Oxford Academic","PubMed Central","ProQuest","Project MUSE","ResearchGate","Royal Society of Chemistry"],
-'S-Z':["Springer Nature","ScienceDirect","Scopus","Taylor & Francis","Turnitin","Wiley Online Library","World Bank eLibrary","Zendy"]
-};
-let current='A';
-function renderDB(){
-let list=allDB[current];
-let q=document.getElementById('searchInput').value.toLowerCase();
-let filtered=list.filter(x=>x.toLowerCase().includes(q));
-let grid=document.getElementById('dbGrid');
-grid.innerHTML=filtered.map(n=>`<div class="border rounded-xl p-3 hover:border-blue-500 hover:shadow cursor-pointer"><p class="font-bold text-[14px]">${n.split(' - ')[0]}</p><p class="text-[11px] text-gray-500">${n}</p><p class="text-[11px] text-[#00A651] font-bold mt-1">Access →</p></div>`).join('');
-document.getElementById('dbCount').innerText = 'Showing '+filtered.length+' databases • Category: '+current;
-}
-function setCat(c,btn){current=c; document.querySelectorAll('.db-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); renderDB();}
-function searchDB(){renderDB();}
-function nextPage(){let cats=['A','B-G','H-N','O-R','S-Z']; let i=cats.indexOf(current); current=cats[(i+1)%cats.length]; document.querySelectorAll('.db-btn').forEach((b,idx)=>{b.classList.toggle('active', cats[idx]==current)}); renderDB();}
-function prevPage(){let cats=['A','B-G','H-N','O-R','S-Z']; let i=cats.indexOf(current); current=cats[(i-1+cats.length)%cats.length]; document.querySelectorAll('.db-btn').forEach((b,idx)=>{b.classList.toggle('active', cats[idx]==current)}); renderDB();}
-renderDB();
-</script>
-</body></html>
+
+<!-- IMPORTANCE -->
+<section id="importance" class="bg-[#5C3317] text-white py-14">
+<div class="max-w-6xl mx-auto px-4">
+<h3 class="font-head text-3xl md:text-4xl font-bold text-center">📚 Library Keno Eto Dorkari?</h3>
+<p class="text-center text-amber-200 mt-2">Library sudhu boi rakhar jayga na, eita jibon bodle deoar jayga</p>
+<div class="grid md:grid-cols-3 gap-5 mt-10">
+<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🧠</span><h4 class="font-bold text-xl mt-3">1. Gyan Bare</h4><p class="text-gray-600 mt-2">Boi porle notun notun bishoy jana jay. Porikkhay valo result, chakrir porikkhay egiye thaka - sob boi thekei ase.</p></div>
+<div class="bg-amber-400 text-black rounded-2xl p-6"><span class="text-4xl">💡</span><h4 class="font-bold text-xl mt-3">2. Chinta Shokti Bare</h4><p class="mt-2">Boi manusher chinta korar khomota baray. Jara boi pore tara valo siddhanto nite pare.</p></div>
+<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">📱</span><h4 class="font-bold text-xl mt-3">3. Mobile Theke Mukti</h4><p class="text-gray-600 mt-2">Saradin mobile na dekhe library te 1 ghonta boi porle mon valo thake, chokh valo thake.</p></div>
+<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🎯</span><h4 class="font-bold text-xl mt-3">4. Sopno Puron Hoy</h4><p class="text-gray-600 mt-2">Boro boro manush - Kazi Nazrul, Humayun Ahmed sobai library theke boro hoyeche. Tomar sopnoo ekhan theke suru hobe.</p></div>
+<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🤝</span><h4 class="font-bold text-xl mt-3">5. Bondhutto Hoy</h4><p class="text-gray-600 mt-2">Library te valo valo bondhu pawa jay, jara porasuna niye vabe.</p></div>
+<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">💰</span><h4 class="font-bold text-xl mt-3">6. Taka Bachay</h4><p class="text-gray-600 mt-2">Dami dami boi kinar dorkar nai. Library theke FREE te sob boi pora jay.</p></div>
+</div>
+<div class="bg-white/10 border border-white/20 rounded-2xl p-6 mt-8 text-center">
+<p class="text-xl md:text-2xl font-bold italic">"Ekta Library Khola Mane 100 Ta Jail Bondho Kora"</p>
+<p class="text-amber-300 mt-2">- Amader Biswas</p>
+</div>
+</div>
+</section>
+
+<!-- BOOKS -->
+<section id="books" class="max-w-6xl mx-auto px-4 py-12">
+<h3 class="font-head text-3xl font-bold text-center text-[#5C3317]">Ki Ki Boi Paba?</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">📖</span><h4 class="font-bold mt-2">Golper Boi</h4><p class="text-sm text-gray-500">Humayun Ahmed, etc.</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🎓</span><h4 class="font-bold mt-2">Academic</h4><p class="text-sm text-gray-500">Class 1-12, Honours</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">💼</span><h4 class="font-bold mt-2">Job / BCS</h4><p class="text-sm text-gray-500">BCS, Bank, Primary</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🕌</span><h4 class="font-bold mt-2">Islamic</h4><p class="text-sm text-gray-500">Quran, Hadis, Jiboni</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🔬</span><h4 class="font-bold mt-2">Biggan</h4><p class="text-sm text-gray-500">Science, Technology</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🌍</span><h4 class="font-bold mt-2">English</h4><p class="text-sm text-gray-500">Story, Grammar</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">👶</span><h4 class="font-bold mt-2">Bacchader</h4><p class="text-sm text-gray-500">Chora, Golpo, Chobi</p></div>
+<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">📰</span><h4 class="font-bold mt-2">Potrika</h4><p class="text-sm text-gray-500">Daily Newspaper</p></div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="max-w-6xl mx-auto px-4 pb-12">
+<h3 class="font-head text-3xl font-bold text-center text-[#5C3317]">Amader Gallery</h3>
+<div class="grid md:grid-cols-3 gap-4 mt-8">
+<img src="IMG_20261126_172304.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
+<img src="IMG_20261126_172324.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
+<img src="IMG_20261126_170118.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
+</div>
+</section>
+
+<!-- RULES -->
+<section class="max-w-4xl mx-auto px-4 pb-12">
+<div class="bg-amber-100 border-2 border-amber-400 rounded-3xl p-6">
+<h3 class="font-head text-2xl font-bold text-center">📋 Library er Niyom</h3>
+<ul class="mt-4 space-y-2 font-semibold">
+<li>1. Library te aste aste kotha bolte hobe, jore kotha bola jabe na.</li>
+<li>2. Boi niye 7 diner moddhe ferot dite hobe.</li>
+<li>3. Boi te dagano ba pata chira jabe na.</li>
+<li>4. Mobile silent rakhte hobe.</li>
+<li>5. Sobai mile library poriskar rakhbo.</li>
+</ul>
+</div>
+</section>
+
+<!-- FOOTER - CLEAN, KONO NAM NAI -->
+<footer id="contact" class="bg-[#2A1708] text-white py-10 text-center px-4">
+<h3 class="font-head text-2xl font-bold">Chole Asho Amader Library Te!</h3>
+<p class="mt-2 text-gray-300">Thikana: Mymensingh, Dhaka Division</p>
+<p class="text-gray-300">Somoy: Sokal 9ta - Rat 8ta (Sukrobar Bondho)</p>
+<a href="#" class="inline-block bg-amber-400 text-black px-8 py-3 rounded-full font-bold mt-5">📚 FREE Member Hou</a>
+</footer>
+
+</body>
+  </html>
