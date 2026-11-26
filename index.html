@@ -1,187 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>DIU Library</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Library | Daffodil International University</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Inter',sans-serif; background:#FAFAF8;}
-.serif{font-family:'Playfair Display',serif;}
-.hero-bg{background:linear-gradient(90deg, rgba(20,15,10,0.92) 0%, rgba(20,15,10,0.65) 55%, rgba(20,15,10,0.2) 100%);}
-.card{transition:0.3s} .card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.12);}
+body{font-family:Arial, sans-serif; margin:0; background:#f2f2f2; color:#222;}
+.header{background:#003366; color:white; padding:10px;}
+.header-inner{max-width:1000px; margin:auto; display:flex; justify-content:space-between; align-items:center;}
+.header a{color:white; text-decoration:none; margin-left:15px; font-size:14px;}
+.container{max-width:1000px; margin:auto; padding:15px;}
+.box{background:white; padding:20px; margin-bottom:15px; border:1px solid #ddd;}
+h1{font-size:22px; margin:0;}
+h2{color:#003366; font-size:20px; border-bottom:2px solid #003366; padding-bottom:5px;}
+h3{color:#003366;}
+img{width:100%; height:300px; object-fit:cover;}
+table{width:100%; border-collapse:collapse; font-size:14px;}
+th,td{border:1px solid #ccc; padding:8px; text-align:left;}
+th{background:#003366; color:white;}
+input,select{width:100%; padding:10px; margin-bottom:10px; border:1px solid #ccc;}
+button{background:#003366; color:white; padding:10px; width:100%; border:none; cursor:pointer;}
+.footer{background:#003366; color:white; padding:20px; text-align:center; font-size:14px;}
+.notice{background:#fff3cd; border:1px solid #ffcc00; padding:10px; font-size:14px;}
+@media(max-width:600px){img{height:200px;} .header-inner{flex-direction:column; text-align:center;}}
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="bg-black text-white text-[12px] md:text-sm py-2 px-4 flex justify-between max-w-7xl mx-auto">
-<span>📍 Daffodil Smart City, Birulia, Savar, Dhaka - 1216 | Open 9 AM - 8 PM</span>
-<span class="hidden md:block">📧 library@daffodilvarsity.edu.bd</span>
-</div>
-
-<!-- NAV -->
-<nav class="bg-white sticky top-0 z-50 shadow-sm">
-<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-<div class="flex items-center gap-3">
-<div class="w-11 h-11 bg-amber-500 rounded-xl flex items-center justify-center text-2xl">📚</div>
-<div><h1 class="font-extrabold text-xl leading-none">LIBRARY</h1><p class="text-[11px] tracking-[0.2em] text-gray-500 font-semibold">DAFFODIL INTERNATIONAL UNIVERSITY</p></div>
-</div>
-<div class="hidden lg:flex gap-7 font-medium text-[15px] text-gray-700">
-<a href="#home">Home</a><a href="#about">About</a><a href="#books">Must Read</a><a href="#authors">Authors</a><a href="#gallery">Gallery</a><a href="#collections">Collections</a>
-</div>
-<a href="#join" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold">Become Member →</a>
-</div>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="relative">
-<img src="IMG_20261126_170118.jpg" class="w-full h-[560px] md:h-[640px] object-cover">
-<div class="absolute inset-0 hero-bg flex items-center">
-<div class="max-w-7xl mx-auto px-4 w-full text-white">
-<span class="bg-amber-500 text-black text-xs font-bold px-3 py-1.5 rounded-full">✦ DAFFODIL INTERNATIONAL UNIVERSITY • EST. 2002</span>
-<h2 class="serif text-[42px] leading-[1.05] md:text-[72px] font-bold mt-5">Knowledge That<br>Builds The Future.</h2>
-<p class="mt-4 max-w-xl text-gray-200 text-[15px] md:text-lg leading-relaxed">A modern Library Management System for DIU students, researchers & book lovers. Search, borrow, read and grow — all in one place.</p>
-<div class="flex flex-wrap gap-3 mt-7">
-<a href="#books" class="bg-amber-500 text-black px-7 py-3.5 rounded-full font-bold text-sm">Explore Must-Read Books</a>
-<a href="#importance" class="bg-white/15 backdrop-blur border border-white/30 px-7 py-3.5 rounded-full font-bold text-sm">Why Library Matters ↓</a>
-</div>
-<div class="flex gap-8 md:gap-12 mt-10">
-<div><p class="text-2xl md:text-3xl font-extrabold">50,000+</p><p class="text-xs text-gray-300 tracking-widest">BOOKS</p></div>
-<div><p class="text-2xl md:text-3xl font-extrabold">8,000+</p><p class="text-xs text-gray-300 tracking-widest">MEMBERS</p></div>
-<div><p class="text-2xl md:text-3xl font-extrabold">98%</p><p class="text-xs text-gray-300 tracking-widest">SATISFACTION</p></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- SEARCH -->
-<div class="max-w-5xl mx-auto px-4 -mt-8 relative z-10">
-<div class="bg-white rounded-2xl shadow-2xl p-3 flex flex-col md:flex-row gap-3">
-<input placeholder="🔍 Search by book name, author, category..." class="flex-1 px-4 py-3 rounded-xl bg-gray-100 outline-none text-sm">
-<select class="px-4 py-3 rounded-xl bg-gray-100 text-sm outline-none"><option>All Categories</option><option>Self Development</option><option>Business</option><option>Novel</option><option>Academic</option></select>
-<button class="bg-black text-white px-8 py-3 rounded-xl font-bold text-sm">Search</button>
-</div>
-</div>
-
-<!-- ABOUT -->
-<section id="about" class="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-center">
+<div class="header">
+<div class="header-inner">
 <div>
-<span class="text-amber-600 font-bold text-xs tracking-[0.25em]">ABOUT DIU LIBRARY</span>
-<h3 class="serif text-3xl md:text-[42px] leading-tight font-bold mt-3">Not Just A Library.<br>A Learning Ecosystem.</h3>
-<p class="text-gray-600 leading-relaxed mt-4">The Daffodil International University Library is one of the largest university libraries in Bangladesh. DIU students can browse catalogs, check availability, borrow books, and access e-resources.</p>
-<div class="grid grid-cols-2 gap-4 mt-6">
-<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">💻</p><b class="text-sm">Digital Catalog</b><p class="text-xs text-gray-500 mt-1">Find any book in seconds</p></div>
-<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">📖</p><b class="text-sm">Easy Borrowing</b><p class="text-xs text-gray-500 mt-1">Borrow & return in 7 days</p></div>
-<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">🤫</p><b class="text-sm">Quiet Zone</b><p class="text-xs text-gray-500 mt-1">Perfect for focus & study</p></div>
-<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">🌐</p><b class="text-sm">E-Library</b><p class="text-xs text-gray-500 mt-1">E-books & Journals</p></div>
+<h1>Daffodil International University</h1>
+<p style="margin:3px 0 0 0; font-size:13px;">Central Library | Daffodil Smart City, Savar, Dhaka</p>
+</div>
+<div style="margin-top:8px;">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#books">Books</a>
+<a href="#authors">Authors</a>
+<a href="#contact">Contact</a>
 </div>
 </div>
-<div class="relative">
-<img src="IMG_20261126_172336.jpg" class="rounded-[24px] w-full h-[420px] object-cover shadow-2xl">
-<div class="absolute -bottom-5 -left-3 md:left-6 bg-black text-white rounded-2xl px-5 py-4 shadow-xl"><p class="text-2xl font-extrabold text-amber-400">DIU Library</p><p class="text-xs text-gray-300">Daffodil Smart City Campus</p></div>
 </div>
-</section>
 
-<!-- MUST READ BOOKS -->
-<section id="books" class="bg-[#14100C] text-white py-16">
-<div class="max-w-7xl mx-auto px-4">
-<span class="text-amber-400 font-bold text-xs tracking-[0.25em]">MUST READ • LIFE CHANGING</span>
-<h3 class="serif text-3xl md:text-5xl font-bold mt-2">Books Everyone Should Read<br>To Achieve Life Goals</h3>
-<p class="text-gray-400 max-w-2xl text-sm mt-3 leading-relaxed">Success is not luck. It is habit, mindset and discipline. These books will change how you think, work and live.</p>
-<div class="grid md:grid-cols-3 gap-5 mt-10">
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">HABIT • #1 BESTSELLER</span><h4 class="font-bold text-xl mt-4">Atomic Habits</h4><p class="text-sm text-gray-500 font-semibold">James Clear</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Small habits, big results. How to build good habits and break bad ones to achieve any goal.</p><p class="text-xs font-bold mt-4">⭐ 4.9 | Available in Library →</p></div>
-<div class="card bg-amber-400 text-black rounded-3xl p-6"><span class="text-xs font-bold bg-black text-white px-3 py-1 rounded-full">MINDSET • CLASSIC</span><h4 class="font-bold text-xl mt-4">Think and Grow Rich</h4><p class="text-sm font-semibold">Napoleon Hill</p><p class="text-sm mt-2 leading-relaxed">The secret of rich and successful people. Mindset, desire and persistence = success formula.</p><p class="text-xs font-bold mt-4">⭐ 4.8 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">SUCCESS • TOP RATED</span><h4 class="font-bold text-xl mt-4">The 7 Habits of Highly Effective People</h4><p class="text-sm text-gray-500 font-semibold">Stephen R. Covey</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">7 habits that make students, leaders and entrepreneurs truly successful in life.</p><p class="text-xs font-bold mt-4">⭐ 4.9 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">MONEY • MUST READ</span><h4 class="font-bold text-xl mt-4">Rich Dad Poor Dad</h4><p class="text-sm text-gray-500 font-semibold">Robert Kiyosaki</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Why money management is more important than salary. Learn how money works.</p><p class="text-xs font-bold mt-4">⭐ 4.8 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">FOCUS • MOTIVATION</span><h4 class="font-bold text-xl mt-4">Deep Work</h4><p class="text-sm text-gray-500 font-semibold">Cal Newport</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">How to focus in a distracted world and do your best work without social media addiction.</p><p class="text-xs font-bold mt-4">⭐ 4.7 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">LIFE • PHILOSOPHY</span><h4 class="font-bold text-xl mt-4">Ikigai</h4><p class="text-sm text-gray-500 font-semibold">Héctor García & Francesc Miralles</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Find your purpose. The Japanese secret to a long, happy and meaningful life.</p><p class="text-xs font-bold mt-4">⭐ 4.8 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">CONFIDENCE</span><h4 class="font-bold text-xl mt-4">How to Win Friends & Influence People</h4><p class="text-sm text-gray-500 font-semibold">Dale Carnegie</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Communication, leadership and winning people - the most important skill for career.</p><p class="text-xs font-bold mt-4">⭐ 4.8 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">DISCIPLINE</span><h4 class="font-bold text-xl mt-4">The Power of Now</h4><p class="text-sm text-gray-500 font-semibold">Eckhart Tolle</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Stop overthinking. Live in present, reduce stress and find peace in life.</p><p class="text-xs font-bold mt-4">⭐ 4.7 | Available in Library →</p></div>
-<div class="card bg-white text-black rounded-3xl p-6"><span class="text-xs font-bold bg-amber-100 text-amber-700 px-3 py-1 rounded-full">DREAM • SUCCESS</span><h4 class="font-bold text-xl mt-4">The Alchemist</h4><p class="text-sm text-gray-500 font-semibold">Paulo Coelho</p><p class="text-sm text-gray-600 mt-2 leading-relaxed">Follow your dream. A story about finding your destiny and never giving up.</p><p class="text-xs font-bold mt-4">⭐ 4.9 | Available in Library →</p></div>
-</div>
-</div>
-</section>
+<div class="container">
 
-<!-- FAMOUS AUTHORS -->
-<section id="authors" class="max-w-7xl mx-auto px-4 py-16">
-<span class="text-amber-600 font-bold text-xs tracking-[0.25em]">FAMOUS AUTHORS</span>
-<h3 class="serif text-3xl md:text-4xl font-bold mt-2">Legendary Writers & Their Best Books</h3>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center text-2xl">✍️</div><div><h4 class="font-bold text-lg">Humayun Ahmed</h4><p class="text-xs text-gray-500">Bangladesh • Novelist</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>Himu Series</b> - Himu, Mayurakkhi</li><li>📖 <b>Misir Ali Series</b> - Debi, Nishithini</li><li>📖 <b>Shonkhonil Karagar</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-yellow-100 rounded-full flex items-center justify-center text-2xl">🎖️</div><div><h4 class="font-bold text-lg">Rabindranath Tagore</h4><p class="text-xs text-gray-500">Nobel Laureate • Poet</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>Gitanjali</b> - Nobel Prize 1913</li><li>📖 <b>Shesher Kobita</b></li><li>📖 <b>Gora</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center text-2xl">🔥</div><div><h4 class="font-bold text-lg">Kazi Nazrul Islam</h4><p class="text-xs text-gray-500">National Poet • Rebel</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>Bidrohi</b> - Rebel Poem</li><li>📖 <b>Agnibeena</b></li><li>📖 <b>Dhumketu</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-2xl">🌍</div><div><h4 class="font-bold text-lg">Paulo Coelho</h4><p class="text-xs text-gray-500">Brazil • Bestseller Author</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>The Alchemist</b></li><li>📖 <b>Eleven Minutes</b></li><li>📖 <b>Brida</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center text-2xl">👑</div><div><h4 class="font-bold text-lg">J.K. Rowling</h4><p class="text-xs text-gray-500">UK • Fantasy Writer</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>Harry Potter Series</b></li><li>📖 <b>Harry Potter & The Philosopher's Stone</b></li><li>📖 <b>Fantastic Beasts</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
-<div class="card bg-white border rounded-3xl p-6"><div class="flex items-center gap-4"><div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center text-2xl">💡</div><div><h4 class="font-bold text-lg">James Clear</h4><p class="text-xs text-gray-500">USA • Habit Expert</p></div></div><ul class="text-sm text-gray-600 mt-4 space-y-2"><li>📖 <b>Atomic Habits</b></li><li>📖 <b>Atomic Habits Workbook</b></li></ul><span class="inline-block mt-4 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available in DIU Library</span></div>
+<div class="box" id="home">
+<h2>Welcome to DIU Library</h2>
+<img src="IMG_20261126_170118.jpg">
+<p>The DIU Central Library is for all students of Daffodil International University. Here students can read books, study for exams, and borrow books for home.</p>
+<p><b>Library Time:</b> Saturday to Thursday, 9 AM to 8 PM. Friday Closed.</p>
+<p><b>Address:</b> Daffodil Smart City, Birulia, Savar, Dhaka - 1216</p>
 </div>
-</section>
 
-<!-- COLLECTIONS -->
-<section id="collections" class="max-w-7xl mx-auto px-4 pb-16">
-<div class="flex justify-between items-end"><div><span class="text-amber-600 font-bold text-xs tracking-[0.25em]">COLLECTIONS</span><h3 class="serif text-3xl md:text-4xl font-bold mt-2">Explore Our Collections</h3></div><span class="hidden md:block text-sm font-semibold bg-black text-white px-4 py-2 rounded-full">50,000+ Books Available</span></div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">💻</span><h4 class="font-bold mt-3">CSE & IT</h4><p class="text-xs text-gray-500 mt-1">Programming, AI, Data</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">📊</span><h4 class="font-bold mt-3">BBA & Business</h4><p class="text-xs text-gray-500 mt-1">Management, Marketing</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">⚡</span><h4 class="font-bold mt-3">EEE & Engineering</h4><p class="text-xs text-gray-500 mt-1">Electrical, Civil</p><span class="inline-block mt-3 text-[11px] bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-bold">Popular</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🔬</span><h4 class="font-bold mt-3">Science & Tech</h4><p class="text-xs text-gray-500 mt-1">Physics, Math</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">📖</span><h4 class="font-bold mt-3">Novels & Literature</h4><p class="text-xs text-gray-500 mt-1">1,200 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🌍</span><h4 class="font-bold mt-3">English & IELTS</h4><p class="text-xs text-gray-500 mt-1">IELTS, GRE, TOEFL</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🕌</span><h4 class="font-bold mt-3">Islamic</h4><p class="text-xs text-gray-500 mt-1">400 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
-<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">📰</span><h4 class="font-bold mt-3">Journals</h4><p class="text-xs text-gray-500 mt-1">Research Journals</p><span class="inline-block mt-3 text-[11px] bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold">Daily</span></div>
+<div class="notice">
+<b>Notice:</b> Please bring your DIU ID Card to enter the library. Books must be returned within 7 days.
 </div>
-</section>
+<br>
 
-<!-- IMPORTANCE -->
-<section id="importance" class="max-w-7xl mx-auto px-4 pb-16">
-<h3 class="serif text-3xl md:text-4xl font-bold">Why Does DIU Need This Library?</h3>
-<div class="grid md:grid-cols-3 gap-5 mt-8">
-<div class="card bg-black text-white rounded-3xl p-6"><span class="text-4xl">🧠</span><h4 class="font-bold text-lg mt-4">Knowledge & Academic Success</h4><p class="text-sm text-gray-400 mt-2">Books provide verified knowledge that helps DIU students excel in exams and research.</p></div>
-<div class="card bg-amber-400 rounded-3xl p-6"><span class="text-4xl">💡</span><h4 class="font-bold text-lg mt-4">Critical Thinking</h4><p class="text-sm mt-2">Reading improves analysis, creativity and decision-making.</p></div>
-<div class="card bg-white border rounded-3xl p-6"><span class="text-4xl">🎯</span><h4 class="font-bold text-lg mt-4">Career & Dreams</h4><p class="text-sm text-gray-600 mt-2">From CSE to BBA to Higher Study Abroad — DIU Library is where careers are built.</p></div>
-</div>
-</section>
-
-<!-- GALLERY + RULES -->
-<section id="gallery" class="max-w-7xl mx-auto px-4 pb-16 grid lg:grid-cols-3 gap-5">
-<div class="lg:col-span-2">
-<h3 class="serif text-3xl font-bold mb-4">Inside DIU Library</h3>
-<div class="grid grid-cols-2 gap-4">
-<img src="IMG_20261126_172304.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover">
-<img src="IMG_20261126_172324.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover">
-<img src="IMG_20261126_170118.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover col-span-2">
-</div>
-</div>
-<div class="bg-black text-white rounded-[24px] p-6 h-fit">
-<h3 class="font-bold text-xl">📋 Library Rules</h3>
-<ul class="mt-4 space-y-3 text-sm text-gray-300">
-<li>✔ Keep silence inside the library</li><li>✔ DIU ID Card is mandatory</li><li>✔ Return books within 7 days</li><li>✔ Do not write or tear pages</li><li>✔ Keep mobile on silent mode</li>
+<div class="box" id="about">
+<h2>About The Library</h2>
+<img src="IMG_20261126_172336.jpg">
+<p>Our library has books for CSE, EEE, BBA, English and other departments. There is a reading room, computer facility and e-library for students.</p>
+<p>Students can search books, read newspapers, and use the internet for study purpose. The library is a quiet place, so everyone must maintain silence.</p>
+<h3>Facilities:</h3>
+<ul>
+<li>Reading Room</li>
+<li>Book Borrowing System</li>
+<li>Computer and WiFi</li>
+<li>E-books and Journals</li>
+<li>Newspaper Section</li>
 </ul>
-<div class="bg-amber-500 text-black rounded-2xl p-4 mt-6"><p class="font-bold text-sm">Opening Hours</p><p class="text-xs mt-1">Sat - Thu: 9 AM - 8 PM<br>Friday: Closed</p></div>
 </div>
-</section>
 
-<!-- JOIN -->
-<section id="join" class="max-w-7xl mx-auto px-4 pb-16">
-<div class="bg-amber-400 rounded-[28px] p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
-<div><h3 class="serif text-3xl md:text-4xl font-bold leading-tight">Become A Member.<br>It's 100% Free For DIU Students.</h3><p class="mt-3 text-sm md:text-base">Join with your DIU ID. Get your library card today and start borrowing books.</p><div class="flex gap-6 mt-5 text-sm font-bold"><span>✓ No Fees</span><span>✓ DIU ID Only</span><span>✓ 7-Day Borrow</span></div></div>
-<form class="bg-white rounded-2xl p-5 space-y-3 shadow-xl">
-<input placeholder="Full Name" class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm">
-<input placeholder="DIU ID (e.g. 221-15-XXXX)" class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm">
-<select class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm"><option>CSE</option><option>EEE</option><option>BBA</option><option>English</option><option>Other Department</option></select>
-<button class="w-full bg-black text-white py-3.5 rounded-xl font-bold text-sm">Request Membership →</button>
+<div class="box" id="books">
+<h2>Books Everyone Should Read For Life Goals</h2>
+<p>These books are very helpful for students to build good habits, focus, and career. All books are available in our library.</p>
+<table>
+<tr><th>Book Name</th><th>Author</th><th>Why You Should Read</th></tr>
+<tr><td>Atomic Habits</td><td>James Clear</td><td>To build good habits</td></tr>
+<tr><td>Think and Grow Rich</td><td>Napoleon Hill</td><td>To learn mindset for success</td></tr>
+<tr><td>The 7 Habits of Highly Effective People</td><td>Stephen Covey</td><td>Time management and leadership</td></tr>
+<tr><td>Rich Dad Poor Dad</td><td>Robert Kiyosaki</td><td>To understand money</td></tr>
+<tr><td>Deep Work</td><td>Cal Newport</td><td>To improve focus</td></tr>
+<tr><td>Ikigai</td><td>Hector Garcia</td><td>To find purpose in life</td></tr>
+<tr><td>How to Win Friends and Influence People</td><td>Dale Carnegie</td><td>Communication skill</td></tr>
+<tr><td>The Alchemist</td><td>Paulo Coelho</td><td>To follow your dream</td></tr>
+</table>
+</div>
+
+<div class="box" id="authors">
+<h2>Famous Authors and Their Books</h2>
+<p><b>1. Humayun Ahmed (Bangladesh)</b><br>
+Books: Himu Series, Misir Ali Series, Shonkhonil Karagar, Nondito Noroke</p>
+
+<p><b>2. Rabindranath Tagore (Nobel Prize 1913)</b><br>
+Books: Gitanjali, Shesher Kobita, Gora, Chokher Bali</p>
+
+<p><b>3. Kazi Nazrul Islam (National Poet)</b><br>
+Books: Bidrohi, Agnibeena, Dhumketu</p>
+
+<p><b>4. Paulo Coelho (Brazil)</b><br>
+Books: The Alchemist, Eleven Minutes, Brida</p>
+
+<p><b>5. J.K. Rowling (UK)</b><br>
+Books: Harry Potter Series</p>
+
+<p><b>6. James Clear (USA)</b><br>
+Books: Atomic Habits</p>
+</div>
+
+<div class="box">
+<h2>Library Rules</h2>
+<ol>
+<li>DIU ID Card is mandatory.</li>
+<li>Keep silence inside the library.</li>
+<li>Return books within 7 days.</li>
+<li>Do not write or tear pages.</li>
+<li>Keep mobile on silent mode.</li>
+<li>Food is not allowed inside.</li>
+</ol>
+<h3>Photos</h3>
+<img src="IMG_20261126_172304.jpg" style="height:220px;">
+<br><br>
+<img src="IMG_20261126_172324.jpg" style="height:220px;">
+</div>
+
+<div class="box" id="contact">
+<h2>Library Membership Form</h2>
+<p>Fill this form to become a member. Library staff will contact you.</p>
+<form>
+Full Name<br>
+<input type="text" placeholder="Enter your full name"><br>
+DIU ID<br>
+<input type="text" placeholder="Example: 221-15-XXXX"><br>
+Department<br>
+<select><option>CSE</option><option>EEE</option><option>BBA</option><option>English</option><option>Other</option></select><br>
+<button>Submit</button>
 </form>
 </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="bg-black text-white py-10">
-<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
-<div><h4 class="font-extrabold text-xl">LIBRARY - DIU</h4><p class="text-sm text-gray-400 mt-2 max-w-sm">Daffodil International University Library - A modern digital library for higher study, research and lifelong learning.</p></div>
-<div class="text-sm text-gray-400"><p class="text-white font-bold mb-2">Contact</p><p>Daffodil Smart City,</p><p>Birulia, Savar, Dhaka - 1216</p><p>library@daffodilvarsity.edu.bd</p></div>
-<div class="text-sm"><p class="text-white font-bold mb-2">Quick Links</p><p class="text-gray-400">Home • About • Must Read • Authors</p></div>
 </div>
-</footer>
+
+<div class="footer" id="contact2">
+<p><b>DIU Central Library</b><br>
+Daffodil Smart City, Birulia, Savar, Dhaka - 1216<br>
+Email: library@daffodilvarsity.edu.bd | Phone: 02-9138234<br>
+© 2026 Daffodil International University</p>
+</div>
+
 </body>
-  </html>
+</html>
