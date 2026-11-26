@@ -1,134 +1,170 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amader Library - Gyaner Alo</title>
+<title>Library | Digital Knowledge Hub</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:'Hind Siliguri',sans-serif; background:#FFF7ED;}
-.font-head{font-family:'Poppins',sans-serif;}
+body{font-family:'Inter',sans-serif; background:#FAFAF8;}
+.serif{font-family:'Playfair Display',serif;}
+.hero-bg{background:linear-gradient(90deg, rgba(20,15,10,0.92) 0%, rgba(20,15,10,0.65) 55%, rgba(20,15,10,0.2) 100%);}
+.card{transition:0.3s} .card:hover{transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.12);}
 </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav class="bg-[#5C3317] text-white p-4 sticky top-0 z-50 flex justify-between items-center shadow-lg">
-<div class="flex items-center gap-2">
-<span class="text-3xl">📚</span>
-<h1 class="font-head font-bold text-lg md:text-2xl">AMADER LIBRARY</h1>
+<!-- TOP BAR -->
+<div class="bg-black text-white text-[12px] md:text-sm py-2 px-4 flex justify-between max-w-7xl mx-auto">
+<span>📍 Mymensingh, Dhaka Division | Open 9 AM - 8 PM</span>
+<span class="hidden md:block">📧 library@edu.com | ☎️ +880 1700-000000</span>
 </div>
-<div class="hidden md:flex gap-6 font-semibold">
-<a href="#home">Home</a>
-<a href="#importance">Importance</a>
-<a href="#books">Books</a>
+
+<!-- NAV -->
+<nav class="bg-white sticky top-0 z-50 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 bg-amber-500 rounded-xl flex items-center justify-center text-2xl">📚</div>
+<div><h1 class="font-extrabold text-xl leading-none tracking-tight">LIBRARY</h1><p class="text-[11px] tracking-[0.25em] text-gray-500 font-semibold">DIGITAL KNOWLEDGE HUB</p></div>
+</div>
+<div class="hidden lg:flex gap-8 font-medium text-[15px] text-gray-700">
+<a href="#home" class="hover:text-amber-600">Home</a>
+<a href="#about">About</a>
+<a href="#importance">Why Library</a>
+<a href="#collections">Collections</a>
 <a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
 </div>
-<a href="#contact" class="bg-amber-400 text-black px-4 py-2 rounded-full font-bold text-sm">Join Now</a>
+<a href="#join" class="bg-black text-white px-5 py-2.5 rounded-full text-sm font-semibold">Become Member →</a>
+</div>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="relative">
-<img src="IMG_20261126_170118.jpg" class="w-full h-[480px] md:h-[580px] object-cover">
-<div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white px-4">
-<h2 class="font-head text-3xl md:text-6xl font-extrabold leading-tight">GYANER ALO<br><span class="text-amber-400">AMADER LIBRARY</span></h2>
-<p class="mt-4 max-w-2xl text-base md:text-lg">Boi poro, jibon goro. Amader library sudhu boier ghor na, eita sopno dekhar jayga.</p>
-<div class="flex gap-3 mt-6">
-<a href="#books" class="bg-amber-400 text-black px-6 py-3 rounded-full font-bold">📖 Boi Dekho</a>
-<a href="#importance" class="bg-white text-black px-6 py-3 rounded-full font-bold">Keno Dorkar?</a>
+<img src="IMG_20261126_170118.jpg" class="w-full h-[560px] md:h-[640px] object-cover">
+<div class="absolute inset-0 hero-bg flex items-center">
+<div class="max-w-7xl mx-auto px-4 w-full text-white">
+<span class="bg-amber-500 text-black text-xs font-bold px-3 py-1.5 rounded-full">✦ HIGHER STUDY PROJECT • 2026</span>
+<h2 class="serif text-[42px] leading-[1.05] md:text-[72px] font-bold mt-5">Knowledge That<br>Builds The Future.</h2>
+<p class="mt-4 max-w-xl text-gray-200 text-[15px] md:text-lg leading-relaxed">A modern Library Management System for students, researchers & book lovers. Search, borrow, read and grow — all in one place.</p>
+<div class="flex flex-wrap gap-3 mt-7">
+<a href="#collections" class="bg-amber-500 text-black px-7 py-3.5 rounded-full font-bold text-sm">Browse Collections</a>
+<a href="#importance" class="bg-white/15 backdrop-blur border border-white/30 px-7 py-3.5 rounded-full font-bold text-sm">Why Library Matters ↓</a>
 </div>
-<div class="flex gap-6 mt-8 text-center">
-<div><p class="text-2xl font-bold">5000+</p><p class="text-xs">Boi</p></div>
-<div><p class="text-2xl font-bold">1200+</p><p class="text-xs">Member</p></div>
-<div><p class="text-2xl font-bold">100%</p><p class="text-xs">Free</p></div>
+<div class="flex gap-8 md:gap-12 mt-10">
+<div><p class="text-2xl md:text-3xl font-extrabold">5,000+</p><p class="text-xs text-gray-300 tracking-widest">BOOKS</p></div>
+<div><p class="text-2xl md:text-3xl font-extrabold">1,200+</p><p class="text-xs text-gray-300 tracking-widest">MEMBERS</p></div>
+<div><p class="text-2xl md:text-3xl font-extrabold">98%</p><p class="text-xs text-gray-300 tracking-widest">SATISFACTION</p></div>
+</div>
 </div>
 </div>
 </section>
 
-<!-- ABOUT -->
-<section class="max-w-6xl mx-auto px-4 py-12">
-<div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 grid md:grid-cols-2 gap-8 items-center">
-<div>
-<h3 class="font-head text-2xl md:text-3xl font-bold text-[#5C3317]">Amader Library Somporke</h3>
-<p class="mt-4 text-gray-700 leading-relaxed">Amader library 2015 sal theke elakar chatro, shikkhok ebong boi premider seba diye asche. Ekhane niribili porar poribesh, computer, free WiFi ebong 5000+ boi ache.</p>
-<ul class="mt-4 space-y-2 font-semibold text-gray-800">
-<li>✅ Sokale 9ta - Rate 8ta porjonto khola</li>
-<li>✅ Sobar jonno sompurno FREE</li>
-<li>✅ BCS, Admission, Job er alada section</li>
-<li>✅ Bacchader jonno alada Golper Boi Corner</li>
-</ul>
+<!-- SEARCH BAR -->
+<div class="max-w-5xl mx-auto px-4 -mt-8 relative z-10">
+<div class="bg-white rounded-2xl shadow-2xl p-3 flex flex-col md:flex-row gap-3">
+<input placeholder="🔍 Search by book name, author, category..." class="flex-1 px-4 py-3 rounded-xl bg-gray-100 outline-none text-sm">
+<select class="px-4 py-3 rounded-xl bg-gray-100 text-sm outline-none"><option>All Categories</option><option>Academic</option><option>BCS & Job</option><option>Novel</option><option>Science</option></select>
+<button class="bg-black text-white px-8 py-3 rounded-xl font-bold text-sm">Search</button>
 </div>
-<img src="IMG_20261126_172336.jpg" class="rounded-2xl w-full h-[300px] object-cover shadow">
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="max-w-7xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10 items-center">
+<div>
+<span class="text-amber-600 font-bold text-xs tracking-[0.25em]">ABOUT THE LIBRARY</span>
+<h3 class="serif text-3xl md:text-[42px] leading-tight font-bold mt-3">Not Just A Library.<br>A Learning Ecosystem.</h3>
+<p class="text-gray-600 leading-relaxed mt-4">This Library System combines traditional reading with digital management. Members can browse catalogs, check availability, borrow books, and track reading history — all from a simple, fast interface.</p>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">💻</p><b class="text-sm">Digital Catalog</b><p class="text-xs text-gray-500 mt-1">Find any book in seconds</p></div>
+<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">📖</p><b class="text-sm">Easy Borrowing</b><p class="text-xs text-gray-500 mt-1">Borrow & return in 7 days</p></div>
+<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">🤫</p><b class="text-sm">Quiet Zone</b><p class="text-xs text-gray-500 mt-1">Perfect for focus & study</p></div>
+<div class="bg-white p-4 rounded-2xl border"><p class="text-2xl">🌐</p><b class="text-sm">Free WiFi</b><p class="text-xs text-gray-500 mt-1">High-speed internet</p></div>
+</div>
+</div>
+<div class="relative">
+<img src="IMG_20261126_172336.jpg" class="rounded-[24px] w-full h-[420px] object-cover shadow-2xl">
+<div class="absolute -bottom-5 -left-3 md:left-6 bg-black text-white rounded-2xl px-5 py-4 shadow-xl"><p class="text-2xl font-extrabold text-amber-400">Since 2015</p><p class="text-xs text-gray-300">Serving 10+ Years</p></div>
 </div>
 </section>
 
 <!-- IMPORTANCE -->
-<section id="importance" class="bg-[#5C3317] text-white py-14">
-<div class="max-w-6xl mx-auto px-4">
-<h3 class="font-head text-3xl md:text-4xl font-bold text-center">📚 Library Keno Eto Dorkari?</h3>
-<p class="text-center text-amber-200 mt-2">Library sudhu boi rakhar jayga na, eita jibon bodle deoar jayga</p>
+<section id="importance" class="bg-[#14100C] text-white py-16">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between md:items-end gap-4">
+<div><span class="text-amber-400 font-bold text-xs tracking-[0.25em]">IMPORTANCE OF LIBRARY</span><h3 class="serif text-3xl md:text-5xl font-bold mt-2">Why Does The World<br>Still Need Libraries?</h3></div>
+<p class="text-gray-400 max-w-md text-sm leading-relaxed">In the age of AI and social media, libraries remain the most trusted place for deep learning, focus and equal opportunity.</p>
+</div>
 <div class="grid md:grid-cols-3 gap-5 mt-10">
-<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🧠</span><h4 class="font-bold text-xl mt-3">1. Gyan Bare</h4><p class="text-gray-600 mt-2">Boi porle notun notun bishoy jana jay. Porikkhay valo result, chakrir porikkhay egiye thaka - sob boi thekei ase.</p></div>
-<div class="bg-amber-400 text-black rounded-2xl p-6"><span class="text-4xl">💡</span><h4 class="font-bold text-xl mt-3">2. Chinta Shokti Bare</h4><p class="mt-2">Boi manusher chinta korar khomota baray. Jara boi pore tara valo siddhanto nite pare.</p></div>
-<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">📱</span><h4 class="font-bold text-xl mt-3">3. Mobile Theke Mukti</h4><p class="text-gray-600 mt-2">Saradin mobile na dekhe library te 1 ghonta boi porle mon valo thake, chokh valo thake.</p></div>
-<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🎯</span><h4 class="font-bold text-xl mt-3">4. Sopno Puron Hoy</h4><p class="text-gray-600 mt-2">Boro boro manush - Kazi Nazrul, Humayun Ahmed sobai library theke boro hoyeche. Tomar sopnoo ekhan theke suru hobe.</p></div>
-<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">🤝</span><h4 class="font-bold text-xl mt-3">5. Bondhutto Hoy</h4><p class="text-gray-600 mt-2">Library te valo valo bondhu pawa jay, jara porasuna niye vabe.</p></div>
-<div class="bg-white text-black rounded-2xl p-6"><span class="text-4xl">💰</span><h4 class="font-bold text-xl mt-3">6. Taka Bachay</h4><p class="text-gray-600 mt-2">Dami dami boi kinar dorkar nai. Library theke FREE te sob boi pora jay.</p></div>
-</div>
-<div class="bg-white/10 border border-white/20 rounded-2xl p-6 mt-8 text-center">
-<p class="text-xl md:text-2xl font-bold italic">"Ekta Library Khola Mane 100 Ta Jail Bondho Kora"</p>
-<p class="text-amber-300 mt-2">- Amader Biswas</p>
+<div class="card bg-white text-black rounded-3xl p-6"><span class="text-4xl">🧠</span><h4 class="font-bold text-lg mt-4">Knowledge & Academic Success</h4><p class="text-sm text-gray-600 mt-2 leading-relaxed">Books provide structured, verified knowledge that helps students excel in exams, research and higher study.</p></div>
+<div class="card bg-amber-400 text-black rounded-3xl p-6"><span class="text-4xl">💡</span><h4 class="font-bold text-lg mt-4">Critical Thinking</h4><p class="text-sm mt-2 leading-relaxed">Reading improves analysis, creativity and decision-making — skills no shortcut can replace.</p></div>
+<div class="card bg-white text-black rounded-3xl p-6"><span class="text-4xl">⚖️</span><h4 class="font-bold text-lg mt-4">Equal Opportunity</h4><p class="text-sm text-gray-600 mt-2 leading-relaxed">Rich or poor — everyone gets the same books, same internet and same chance to grow. Free for all.</p></div>
+<div class="card bg-white text-black rounded-3xl p-6"><span class="text-4xl">📱</span><h4 class="font-bold text-lg mt-4">Digital Detox</h4><p class="text-sm text-gray-600 mt-2 leading-relaxed">One hour of reading reduces stress, improves sleep and protects eyes from endless screen time.</p></div>
+<div class="card bg-white text-black rounded-3xl p-6"><span class="text-4xl">🎯</span><h4 class="font-bold text-lg mt-4">Career & Dreams</h4><p class="text-sm text-gray-600 mt-2 leading-relaxed">From BCS to IELTS to University Admission — the library is where careers are built.</p></div>
+<div class="card bg-white text-black rounded-3xl p-6"><span class="text-4xl">🤝</span><h4 class="font-bold text-lg mt-4">Community & Culture</h4><p class="text-sm text-gray-600 mt-2 leading-relaxed">Workshops, reading clubs and study groups turn strangers into a learning community.</p></div>
 </div>
 </div>
 </section>
 
-<!-- BOOKS -->
-<section id="books" class="max-w-6xl mx-auto px-4 py-12">
-<h3 class="font-head text-3xl font-bold text-center text-[#5C3317]">Ki Ki Boi Paba?</h3>
+<!-- COLLECTIONS -->
+<section id="collections" class="max-w-7xl mx-auto px-4 py-16">
+<div class="flex justify-between items-end"><div><span class="text-amber-600 font-bold text-xs tracking-[0.25em]">COLLECTIONS</span><h3 class="serif text-3xl md:text-4xl font-bold mt-2">Explore Our Collections</h3></div><span class="hidden md:block text-sm font-semibold bg-black text-white px-4 py-2 rounded-full">5000+ Books Available</span></div>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">📖</span><h4 class="font-bold mt-2">Golper Boi</h4><p class="text-sm text-gray-500">Humayun Ahmed, etc.</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🎓</span><h4 class="font-bold mt-2">Academic</h4><p class="text-sm text-gray-500">Class 1-12, Honours</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">💼</span><h4 class="font-bold mt-2">Job / BCS</h4><p class="text-sm text-gray-500">BCS, Bank, Primary</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🕌</span><h4 class="font-bold mt-2">Islamic</h4><p class="text-sm text-gray-500">Quran, Hadis, Jiboni</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🔬</span><h4 class="font-bold mt-2">Biggan</h4><p class="text-sm text-gray-500">Science, Technology</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">🌍</span><h4 class="font-bold mt-2">English</h4><p class="text-sm text-gray-500">Story, Grammar</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">👶</span><h4 class="font-bold mt-2">Bacchader</h4><p class="text-sm text-gray-500">Chora, Golpo, Chobi</p></div>
-<div class="bg-white rounded-2xl p-5 shadow text-center"><span class="text-4xl">📰</span><h4 class="font-bold mt-2">Potrika</h4><p class="text-sm text-gray-500">Daily Newspaper</p></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">📖</span><h4 class="font-bold mt-3">Novels & Literature</h4><p class="text-xs text-gray-500 mt-1">1,200 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🎓</span><h4 class="font-bold mt-3">Academic</h4><p class="text-xs text-gray-500 mt-1">1,500 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">💼</span><h4 class="font-bold mt-3">BCS & Job</h4><p class="text-xs text-gray-500 mt-1">800 Books</p><span class="inline-block mt-3 text-[11px] bg-amber-100 text-amber-700 px-3 py-1 rounded-full font-bold">Popular</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🔬</span><h4 class="font-bold mt-3">Science & Tech</h4><p class="text-xs text-gray-500 mt-1">600 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🕌</span><h4 class="font-bold mt-3">Islamic</h4><p class="text-xs text-gray-500 mt-1">400 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">🌍</span><h4 class="font-bold mt-3">English</h4><p class="text-xs text-gray-500 mt-1">500 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">👶</span><h4 class="font-bold mt-3">Children</h4><p class="text-xs text-gray-500 mt-1">350 Books</p><span class="inline-block mt-3 text-[11px] bg-green-100 text-green-700 px-3 py-1 rounded-full font-bold">Available</span></div>
+<div class="card bg-white rounded-2xl p-6 border text-center"><span class="text-4xl">📰</span><h4 class="font-bold mt-3">Newspapers</h4><p class="text-xs text-gray-500 mt-1">Daily Updated</p><span class="inline-block mt-3 text-[11px] bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-bold">Daily</span></div>
 </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="max-w-6xl mx-auto px-4 pb-12">
-<h3 class="font-head text-3xl font-bold text-center text-[#5C3317]">Amader Gallery</h3>
-<div class="grid md:grid-cols-3 gap-4 mt-8">
-<img src="IMG_20261126_172304.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
-<img src="IMG_20261126_172324.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
-<img src="IMG_20261126_170118.jpg" class="rounded-2xl h-[260px] w-full object-cover shadow">
+<!-- GALLERY + RULES -->
+<section id="gallery" class="max-w-7xl mx-auto px-4 pb-16 grid lg:grid-cols-3 gap-5">
+<div class="lg:col-span-2">
+<h3 class="serif text-3xl font-bold mb-4">Inside Our Library</h3>
+<div class="grid grid-cols-2 gap-4">
+<img src="IMG_20261126_172304.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover">
+<img src="IMG_20261126_172324.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover">
+<img src="IMG_20261126_170118.jpg" class="rounded-2xl h-[220px] md:h-[260px] w-full object-cover col-span-2">
 </div>
-</section>
-
-<!-- RULES -->
-<section class="max-w-4xl mx-auto px-4 pb-12">
-<div class="bg-amber-100 border-2 border-amber-400 rounded-3xl p-6">
-<h3 class="font-head text-2xl font-bold text-center">📋 Library er Niyom</h3>
-<ul class="mt-4 space-y-2 font-semibold">
-<li>1. Library te aste aste kotha bolte hobe, jore kotha bola jabe na.</li>
-<li>2. Boi niye 7 diner moddhe ferot dite hobe.</li>
-<li>3. Boi te dagano ba pata chira jabe na.</li>
-<li>4. Mobile silent rakhte hobe.</li>
-<li>5. Sobai mile library poriskar rakhbo.</li>
+</div>
+<div class="bg-black text-white rounded-[24px] p-6 h-fit">
+<h3 class="font-bold text-xl">📋 Library Rules</h3>
+<ul class="mt-4 space-y-3 text-sm text-gray-300">
+<li>✔ Keep silence inside the library</li>
+<li>✔ Return books within 7 days</li>
+<li>✔ Do not write or tear pages</li>
+<li>✔ Keep mobile on silent mode</li>
+<li>✔ Keep the library clean</li>
 </ul>
+<div class="bg-amber-500 text-black rounded-2xl p-4 mt-6"><p class="font-bold text-sm">Opening Hours</p><p class="text-xs mt-1">Sat - Thu: 9 AM - 8 PM<br>Friday: Closed</p></div>
 </div>
 </section>
 
-<!-- FOOTER - CLEAN, KONO NAM NAI -->
-<footer id="contact" class="bg-[#2A1708] text-white py-10 text-center px-4">
-<h3 class="font-head text-2xl font-bold">Chole Asho Amader Library Te!</h3>
-<p class="mt-2 text-gray-300">Thikana: Mymensingh, Dhaka Division</p>
-<p class="text-gray-300">Somoy: Sokal 9ta - Rat 8ta (Sukrobar Bondho)</p>
-<a href="#" class="inline-block bg-amber-400 text-black px-8 py-3 rounded-full font-bold mt-5">📚 FREE Member Hou</a>
+<!-- JOIN -->
+<section id="join" class="max-w-7xl mx-auto px-4 pb-16">
+<div class="bg-amber-400 rounded-[28px] p-8 md:p-12 grid md:grid-cols-2 gap-8 items-center">
+<div><h3 class="serif text-3xl md:text-4xl font-bold leading-tight">Become A Member.<br>It's 100% Free.</h3><p class="mt-3 text-sm md:text-base">Join 1,200+ members. Get your library card today and start borrowing books.</p><div class="flex gap-6 mt-5 text-sm font-bold"><span>✓ No Fees</span><span>✓ Instant Card</span><span>✓ 7-Day Borrow</span></div></div>
+<form class="bg-white rounded-2xl p-5 space-y-3 shadow-xl">
+<input placeholder="Full Name" class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm">
+<input placeholder="Email / Phone" class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm">
+<select class="w-full bg-gray-100 px-4 py-3 rounded-xl outline-none text-sm"><option>Student</option><option>Teacher</option><option>Researcher</option><option>General Reader</option></select>
+<button class="w-full bg-black text-white py-3.5 rounded-xl font-bold text-sm">Request Membership →</button>
+<p class="text-[11px] text-center text-gray-400">We will contact you within 24 hours.</p>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-black text-white py-10">
+<div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between gap-6">
+<div><h4 class="font-extrabold text-xl">LIBRARY</h4><p class="text-sm text-gray-400 mt-2 max-w-sm">A modern digital library system for higher study, research and lifelong learning.</p></div>
+<div class="text-sm text-gray-400"><p class="text-white font-bold mb-2">Contact</p><p>Mymensingh, Dhaka Division</p><p>library@edu.com</p><p>Open: 9 AM - 8 PM</p></div>
+<div class="text-sm"><p class="text-white font-bold mb-2">Quick Links</p><p class="text-gray-400">Home • About • Collections • Gallery</p></div>
+</div>
 </footer>
 
 </body>
